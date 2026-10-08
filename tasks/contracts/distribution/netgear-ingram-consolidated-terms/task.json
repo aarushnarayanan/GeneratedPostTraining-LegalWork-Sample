@@ -1,0 +1,348 @@
+{
+  "title": "Consolidate a Distributor Agreement and Its Two Amendments into a Current-Terms Summary and an Open Issues List",
+  "work_type": "analyze",
+  "tags": [
+    "Contracts",
+    "distribution",
+    "amendments",
+    "exclusivity",
+    "territory",
+    "multi-document",
+    "real-filing",
+    "EDGAR",
+    "CUAD"
+  ],
+  "instructions": "The attached files are text segments of one SEC exhibit containing a distributor agreement and two later amendments. The segments overlap, and some text was redacted from the public filing and appears as [*]. Prepare (1) a summary of the terms as they stand after both amendments, covering parties, term and termination, territory, exclusivity, sales restrictions, assignment and governing law, and (2) a list of open issues a reviewing lawyer should resolve, including anything the documents do not let you determine. Do not guess at redacted text. Output: `consolidated-terms.md` and `open-issues.md`.",
+  "deliverables": {
+    "consolidated-terms.md": "consolidated-terms.md",
+    "open-issues.md": "open-issues.md"
+  },
+  "criteria": [
+    {
+      "id": "C-001",
+      "title": "Identifies the parties",
+      "match_criteria": "PASS if the summary identifies NETGEAR, Inc. as the supplier and Ingram Micro as the Distributor. FAIL if either party is missing or the roles are reversed.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "(\"Distributor\") and NETGEAR, Inc. (\"NETGEAR\"), a wholly owned subsidiary of Bay Networks, Inc."
+        }
+      ],
+      "basis": "cuad:Parties"
+    },
+    {
+      "id": "C-002",
+      "title": "States the base agreement's effective date",
+      "match_criteria": "PASS if the summary states that the distributor agreement has an Effective Date of March 1, 1996. FAIL if the effective date is omitted or misstated.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "Effective Date: March 1, 1996"
+        }
+      ],
+      "basis": "cuad:Effective Date"
+    },
+    {
+      "id": "C-003",
+      "title": "States the term and automatic renewal",
+      "match_criteria": "PASS if the summary states that the agreement runs for one year from the Effective Date and renews automatically for successive one-year periods. FAIL if the term or the automatic renewal is omitted or misstated.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "This Agreement will be in effect for one year from the Effective Date and will automatically renew for successive one (1) year periods unless terminated as provided below."
+        }
+      ],
+      "basis": "cuad:Renewal Term"
+    },
+    {
+      "id": "C-004",
+      "title": "States the 90-day termination without cause",
+      "match_criteria": "PASS if the summary states that either party may terminate at any time without cause on ninety (90) days' written notice. FAIL if this right is omitted, attributed to only one party, or given a different notice period.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "This Agreement may be terminated at any time without cause by either party upon ninety (90) days written notice to the other party."
+        }
+      ],
+      "basis": "cuad:Termination For Convenience"
+    },
+    {
+      "id": "C-005",
+      "title": "States the termination for uncured material breach",
+      "match_criteria": "PASS if the summary states that either party may terminate immediately if the other fails to cure a material breach within thirty (30) days after written notice. FAIL if the cure period is omitted or misstated.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "the other party fails to cure a material breach of the Agreement within thirty (30) days after receipt of written notice of such breach from the party not in default"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-006",
+      "title": "States the original territory",
+      "match_criteria": "PASS if the summary states that the base agreement defined the Territory as the United States. FAIL if the original territory is omitted or misstated.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "outside of the Territory identified herein as the United States"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-007",
+      "title": "Reports the territory as amended without guessing the redaction",
+      "match_criteria": "PASS if the summary states that the amendments changed the Territory to the United States plus an additional territory that is redacted in the public filing. FAIL if the summary says the Territory is still only the United States. FAIL if it names a specific additional country or region as fact.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-2-amendment.txt",
+        "ex-10.16-part-3-amendment-2.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-2-amendment.txt",
+          "quote": "the Territory listed in Section 2 of the Agreement is amended to be the United States and [*]"
+        },
+        {
+          "document": "ex-10.16-part-3-amendment-2.txt",
+          "quote": "Section 2, TERRITORY, is amended to be United States, [*]."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-008",
+      "title": "Identifies both amendments and their dates",
+      "match_criteria": "PASS if the summary identifies a first amendment effective October 1, 1996 and an Amendment #2 entered into on July 15, 1998. FAIL if either amendment or its date is missing.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-2-amendment.txt",
+        "ex-10.16-part-3-amendment-2.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-2-amendment.txt",
+          "quote": "This Amendment is entered into effective October 1,1996 (\"Amendment Date\")"
+        },
+        {
+          "document": "ex-10.16-part-3-amendment-2.txt",
+          "quote": "THIS AMENDMENT (the \"Amendment\") is entered into this 15th day of July 1998"
+        }
+      ],
+      "basis": "cuad:Agreement Date"
+    },
+    {
+      "id": "C-009",
+      "title": "Describes exclusivity in the original territory as time-limited",
+      "match_criteria": "PASS if the summary states that Ingram Micro was the only distributor in the Territory during the initial one-year term only, and that the appointment is non-exclusive for any extension or renewal term. FAIL if the summary describes the distributor as currently exclusive in the United States.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "Distributor shall be the only distributor appointed by NETGEAR in the Territory, subject to Distributor conducting mutually agreed to marketing activities"
+        },
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "Following the initial one (1) year term, for any extension or renewal term, Distributor's appointment as Distributor shall be non-exclusive and NETGEAR may appoint other distributors in the Territory at its sole discretion."
+        }
+      ],
+      "basis": "cuad:Exclusivity"
+    },
+    {
+      "id": "C-010",
+      "title": "Describes the first amendment's exclusivity for the added territory",
+      "match_criteria": "PASS if the summary states that the first amendment made the Distributor the only distributor in the added (redacted) territory for the initial one-year period beginning on the Amendment Date. FAIL if the amendment's exclusivity provision is not described.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-2-amendment.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-2-amendment.txt",
+          "quote": "During the initial one year period beginning on the Amendment Date, Distributor shall be the only distributor appointed by NETGEAR in [*]"
+        }
+      ],
+      "basis": "cuad:Exclusivity"
+    },
+    {
+      "id": "C-011",
+      "title": "Notes that exclusivity is conditioned on the marketing plan",
+      "match_criteria": "PASS if the summary states that the exclusivity was subject to the Distributor carrying out agreed marketing activities under the Marketing Plan. FAIL if the condition is omitted.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "NETGEAR's agreement not to appoint additional distributors of NETGEAR Products in the Territory during the [*] of this Agreement is predicated upon Distributor performing the mutually agreed upon activities included in the Marketing Plan attached as Exhibit 4."
+        }
+      ],
+      "basis": "cuad:Exclusivity"
+    },
+    {
+      "id": "C-012",
+      "title": "Notes NETGEAR's reserved right to sell to non-distributors",
+      "match_criteria": "PASS if the summary states that NETGEAR reserved the right to sell or license Products in the Territory to customers other than distributors, such as resellers selling through their own retail outlets. FAIL if this carve-out is omitted.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "NETGEAR reserves the right to sell or license Products in the Territory to customers other than distributors"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-013",
+      "title": "States the restriction on direct sales to end users",
+      "match_criteria": "PASS if the summary states that the Distributor may not sell or license Products directly to end-use customers without NETGEAR's express written consent. FAIL if the restriction is omitted.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "Distributor may not sell or license Products directly to end use customers without the express written consent of NETGEAR."
+        }
+      ],
+      "basis": "cuad:No-Solicit Of Customers"
+    },
+    {
+      "id": "C-014",
+      "title": "States the assignment restriction",
+      "match_criteria": "PASS if the summary states that neither party may assign the agreement without the other's prior written permission, which may not be unreasonably withheld or delayed. FAIL if the restriction is omitted or attributed to only one party.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "This Agreement may not be assigned by either party without prior written permission from the other party, which permission shall not be unreasonably withheld or delayed."
+        }
+      ],
+      "basis": "cuad:Anti-Assignment"
+    },
+    {
+      "id": "C-015",
+      "title": "States the governing law",
+      "match_criteria": "PASS if the summary states that the agreement is governed by the laws of the State of California. FAIL if governing law is omitted or misstated.",
+      "deliverables": [
+        "consolidated-terms.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "is governed by the laws of the State of California except that body of law dealing with conflicts of law"
+        }
+      ],
+      "basis": "cuad:Governing Law"
+    },
+    {
+      "id": "C-016",
+      "title": "Lists the redacted territory as an open issue",
+      "match_criteria": "PASS if the open issues list states that the additional territory, or other redacted terms marked [*], cannot be determined from the public filing and must be confirmed from an unredacted copy. FAIL if redactions are not raised as an open issue.",
+      "deliverables": [
+        "open-issues.md"
+      ],
+      "sources": [
+        "ex-10.16-part-2-amendment.txt",
+        "ex-10.16-part-3-amendment-2.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-2-amendment.txt",
+          "quote": "Portions denoted with an asterisk have been omitted and filed separately with the Securities and Exchange Commission pursuant to a request for confidential treatment."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-017",
+      "title": "Flags the date mismatch in Amendment #2",
+      "match_criteria": "PASS if the open issues list flags that Amendment #2 describes the agreement it amends as dated October 1, 1996, while the base distributor agreement has an Effective Date of March 1, 1996 (October 1, 1996 being the date of the first amendment). FAIL if this inconsistency is not raised.",
+      "deliverables": [
+        "open-issues.md"
+      ],
+      "sources": [
+        "ex-10.16-part-1-distributor-agreement.txt",
+        "ex-10.16-part-3-amendment-2.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ex-10.16-part-3-amendment-2.txt",
+          "quote": "The parties have agreed to amend their Distribution Agreement (\"Agreement\") dated October 1,1996."
+        },
+        {
+          "document": "ex-10.16-part-1-distributor-agreement.txt",
+          "quote": "Effective Date: March 1, 1996"
+        }
+      ],
+      "basis": "text"
+    }
+  ]
+}

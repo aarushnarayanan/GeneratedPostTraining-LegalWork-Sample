@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "file": "ex-10.16-part-1-distributor-agreement.txt",
+      "sha256": "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1",
+      "bytes": 41501,
+      "chars": 41501,
+      "kind": "contract filed as an exhibit to an SEC filing",
+      "origin": {
+        "filer": "NETGEAR, INC",
+        "form": null,
+        "filing_date": "2003-04-21",
+        "exhibit": "EX-10.16",
+        "edgar_url": null
+      },
+      "obtained_from": {
+        "dataset": "CUAD v1 (Contract Understanding Atticus Dataset)",
+        "file": "CUADv1.json",
+        "record_title": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT",
+        "field": "paragraphs[0].context",
+        "repository": "https://github.com/TheAtticusProject/cuad",
+        "commit": "67faa0e6023b04fcaae6cc09497ab00e5d63a2a2",
+        "archive": "data.zip",
+        "archive_sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+        "license": "CC BY 4.0"
+      },
+      "modifications": "none"
+    },
+    {
+      "file": "ex-10.16-part-2-amendment.txt",
+      "sha256": "a26d0a46ae672963f96e729745f458b9684cbee0ac2b723045a6fe227cbd1fd7",
+      "bytes": 8113,
+      "chars": 8113,
+      "kind": "contract filed as an exhibit to an SEC filing",
+      "origin": {
+        "filer": "NETGEAR, INC",
+        "form": null,
+        "filing_date": "2003-04-21",
+        "exhibit": "EX-10.16",
+        "edgar_url": null
+      },
+      "obtained_from": {
+        "dataset": "CUAD v1 (Contract Understanding Atticus Dataset)",
+        "file": "CUADv1.json",
+        "record_title": "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",
+        "field": "paragraphs[0].context",
+        "repository": "https://github.com/TheAtticusProject/cuad",
+        "commit": "67faa0e6023b04fcaae6cc09497ab00e5d63a2a2",
+        "archive": "data.zip",
+        "archive_sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+        "license": "CC BY 4.0"
+      },
+      "modifications": "none"
+    },
+    {
+      "file": "ex-10.16-part-3-amendment-2.txt",
+      "sha256": "40b9a08eaf9a9a4cb8062d44af4289e0cb7732b2fe464b083505594978f1b776",
+      "bytes": 4567,
+      "chars": 4567,
+      "kind": "contract filed as an exhibit to an SEC filing",
+      "origin": {
+        "filer": "NETGEAR, INC",
+        "form": null,
+        "filing_date": "2003-04-21",
+        "exhibit": "EX-10.16",
+        "edgar_url": null
+      },
+      "obtained_from": {
+        "dataset": "CUAD v1 (Contract Understanding Atticus Dataset)",
+        "file": "CUADv1.json",
+        "record_title": "NETGEAR,INC_04_21_2003-EX-10.16- AMENDMENT #2 TO THE DISTRIBUTION AGREEMENT",
+        "field": "paragraphs[0].context",
+        "repository": "https://github.com/TheAtticusProject/cuad",
+        "commit": "67faa0e6023b04fcaae6cc09497ab00e5d63a2a2",
+        "archive": "data.zip",
+        "archive_sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+        "license": "CC BY 4.0"
+      },
+      "modifications": "none"
+    }
+  ],
+  "notes": "The three files are CUAD's three text segments of a single EDGAR exhibit. They overlap: part 2 begins with the closing pages of the base agreement, and parts 2 and 3 each contain both amendments. They are reproduced exactly as CUAD published them. Text marked [*] was omitted from the public filing under a confidential treatment request."
+}

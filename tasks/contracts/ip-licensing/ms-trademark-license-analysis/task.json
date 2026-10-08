@@ -1,0 +1,328 @@
+{
+  "title": "Analyze a Trademark License Agreement for the Licensee and Report Its Rights, Limits and Termination Exposure",
+  "work_type": "analyze",
+  "tags": [
+    "Contracts",
+    "IP licensing",
+    "trademark",
+    "termination",
+    "assignment",
+    "real-filing",
+    "EDGAR",
+    "CUAD"
+  ],
+  "instructions": "You act for the Licensee under the attached trademark license agreement. Prepare an analysis for the Licensee's board covering: the scope of the license, what the Licensee must do before using the Brand, every way the license can end, the restrictions on assignment and corporate transactions, the allocation of liability, and anything about the state of the document itself that the board should know. Work only from the attached document. Output: `license-analysis.md`.",
+  "deliverables": {
+    "license-analysis.md": "license-analysis.md"
+  },
+  "criteria": [
+    {
+      "id": "C-001",
+      "title": "Describes the license grant accurately",
+      "match_criteria": "PASS if the analysis states that the license is non-exclusive and non-transferable and is limited to the Permitted Activity. FAIL if it describes the license as exclusive or transferable. FAIL if it omits that use is limited to the Permitted Activity.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensor hereby grants to Licensee a non-exclusive, non- transferable, and (subject to Section 1.2 hereof) non-sublicensable license for the use of the Brand solely for the Permitted Activity."
+        }
+      ],
+      "basis": "cuad:License Grant"
+    },
+    {
+      "id": "C-002",
+      "title": "States the sublicensing limits",
+      "match_criteria": "PASS if the analysis states that the Licensee may sublicense only to a wholly owned subsidiary and only with the Licensor's prior written consent. FAIL if either limit is omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee may sublicense its rights under Section 1.1 solely to a current or future wholly owned subsidiary of Licensee, and then only with the prior written consent of Licensor (which shall not be unreasonably withheld)"
+        }
+      ],
+      "basis": "cuad:Affiliate License-Licensee"
+    },
+    {
+      "id": "C-003",
+      "title": "States the prior approval requirement for every use",
+      "match_criteria": "PASS if the analysis states that the Licensee must submit all proposed uses of the Brand to the Licensor for prior written approval. FAIL if the approval requirement is omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Prior to using the Brand in any manner, Licensee shall submit all proposed uses to Licensor for prior written approval."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-004",
+      "title": "States that the term is perpetual subject to termination",
+      "match_criteria": "PASS if the analysis states that the term continues in perpetuity unless the agreement is terminated under its termination provisions. FAIL if it states a fixed term or omits the term.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "The term of this Agreement commences on the Effective Date and continues in perpetuity, unless termination occurs pursuant to Sections 4.2 through 4.4."
+        }
+      ],
+      "basis": "cuad:Expiration Date"
+    },
+    {
+      "id": "C-005",
+      "title": "Flags the Licensor's right to terminate for any reason",
+      "match_criteria": "PASS if the analysis states that the Licensor may terminate immediately upon written notice for any reason. FAIL if this right is omitted or described as requiring cause or a notice period.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensor reserves the right to terminate this Agreement immediately upon written notice for any reason, including if the usage of the Brand is not in compliance with the standards and policies."
+        }
+      ],
+      "basis": "cuad:Termination For Convenience"
+    },
+    {
+      "id": "C-006",
+      "title": "Identifies automatic termination tied to the advisory relationship",
+      "match_criteria": "PASS if the analysis states that the agreement terminates automatically if an affiliate of the Licensor is no longer acting as the Licensee's investment adviser, or if the Advisor is no longer an affiliate of the Licensor. FAIL if automatic termination linked to the advisory relationship is not identified.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "This Agreement shall terminate automatically without notice and immediately (a) if MS Capital Partners Adviser Inc. or another affiliate of Licensor is no longer acting as the investment adviser"
+        },
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "or (b) the Advisor is no longer an affiliate of Licensor."
+        }
+      ],
+      "basis": "cuad:Change Of Control"
+    },
+    {
+      "id": "C-007",
+      "title": "States the 15-day cure period for material breach",
+      "match_criteria": "PASS if the analysis states that either party may terminate for an uncured material breach after a 15-day cure period following written notice. FAIL if the cure period is omitted or misstated.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "if the breaching party does not cure such breach within 15 days after written notice thereof (or any mutually agreed extension)"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-008",
+      "title": "States the assignment restriction",
+      "match_criteria": "PASS if the analysis states that the Licensee may not assign or transfer the agreement without the Licensor's prior written consent, which the Licensor may give or withhold in its sole discretion. FAIL if the consent requirement is omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee may not assign, transfer, pledge, mortgage or otherwise encumber this Agreement or its right to use the Brand (or assume this Agreement in bankruptcy), in whole or in part, without the prior written consent of Licensor in its sole discretion"
+        }
+      ],
+      "basis": "cuad:Anti-Assignment"
+    },
+    {
+      "id": "C-009",
+      "title": "Flags that a merger or change of control counts as an assignment",
+      "match_criteria": "PASS if the analysis states that a merger, change of control, reorganization or sale of all or substantially all of the Licensee's stock is deemed an assignment requiring the Licensor's consent. FAIL if the deemed-assignment rule is not identified.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "a merger, change of control, reorganization or sale of all or substantially all of the stock of Licensee shall be deemed an \"assignment\" requiring the above consent"
+        }
+      ],
+      "basis": "cuad:Change Of Control"
+    },
+    {
+      "id": "C-010",
+      "title": "States the consequence of a prohibited assignment",
+      "match_criteria": "PASS if the analysis states that an attempted assignment in violation of the restriction is void and results in immediate termination of the agreement. FAIL if the termination consequence is omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Any attempted action in violation of the foregoing shall be null and void ab initio and of no force or effect, and shall result in immediate termination of this Agreement."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-011",
+      "title": "Identifies the one-way indemnity",
+      "match_criteria": "PASS if the analysis states that the Licensee must defend and indemnify the Licensor against third-party actions arising from the Licensee's breach, its business, or its unauthorized use of the Brand. FAIL if the Licensee's indemnity is omitted or the analysis states that the Licensor gives a corresponding indemnity.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee will defend at its expense, indemnify and hold harmless Licensor and its affiliates"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-012",
+      "title": "Notes the carve-out from the consequential damages exclusion",
+      "match_criteria": "PASS if the analysis states that the mutual exclusion of special, indirect and consequential damages does not apply to the Licensee's indemnification obligations. FAIL if the exclusion is described without this carve-out.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "EXCEPT WITH RESPECT TO LICENSEE'S INDEMNIFICATION OBLIGATIONS UNDER SECTION 7, NEITHER PARTY WILL BE LIABLE TO THE OTHER PARTY FOR SPECIAL, INDIRECT, CONSEQUENTIAL, EXEMPLARY, PUNITIVE OR INCIDENTAL DAMAGES"
+        }
+      ],
+      "basis": "cuad:Uncapped Liability"
+    },
+    {
+      "id": "C-013",
+      "title": "Notes the warranty disclaimer",
+      "match_criteria": "PASS if the analysis states that the Licensor disclaims warranties about the Brand, including title or non-infringement, and that use is on an as-is basis. FAIL if the disclaimer is omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "LICENSOR MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THIS AGREEMENT AND THE BRAND"
+        },
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "LICENSEE'S USE OF THE PERMITTED ACTIVITY IS SOLELY ON AN \"AS-IS\" BASIS."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-014",
+      "title": "States the ownership and no-challenge terms",
+      "match_criteria": "PASS if the analysis states that goodwill from the Licensee's use belongs to the Licensor and that the Licensee may not challenge the Licensor's ownership of the Brand or register marks containing it. FAIL if both the goodwill term and the no-challenge term are omitted.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "The parties intend that any and all goodwill in the Brand arising from Licensee's or any applicable sublicensees' Permitted Activity shall inure solely to the benefit of Licensor."
+        },
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee agrees not to do anything inconsistent with such ownership, including (i) filing to register any trademark or service mark containing the Brand"
+        }
+      ],
+      "basis": "cuad:Covenant Not To Sue"
+    },
+    {
+      "id": "C-015",
+      "title": "States governing law and forum",
+      "match_criteria": "PASS if the analysis states that New York law governs and that the parties submit to the exclusive jurisdiction of the state and federal courts located in New York City. FAIL if governing law is omitted or misstated.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "THIS AGREEMENT SHALL BE GOVERNED BY, AND CONSTRUED AND INTERPRETED IN ACCORDANCE WITH, THE LAW OF THE STATE OF NEW YORK."
+        },
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "SUBMITS TO THE EXCLUSIVE JURISDICTION OF THE STATE AND FEDERAL COURTS LOCATED IN NEW YORK CITY"
+        }
+      ],
+      "basis": "cuad:Governing Law"
+    },
+    {
+      "id": "C-016",
+      "title": "Flags that the document is an undated, unsigned form",
+      "match_criteria": "PASS if the analysis points out that the document as filed has blank placeholders for its effective date or is unsigned, so the board is looking at a form of agreement and not an executed copy. FAIL if the analysis states a specific effective date or treats the document as executed without noting the blanks.",
+      "deliverables": [
+        "license-analysis.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "is effective as of the [·] day of [·], 2019 (\"Effective Date\")"
+        },
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "By: Name: Title:"
+        }
+      ],
+      "basis": "cuad:Agreement Date"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[project]
+name = "realdocs-legal-bench"
+version = "0.1.0"
+description = "A legal agent benchmark built only from real public legal documents."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["bench_core*"]
+
+[tool.setuptools.package-data]
+bench_core = ["prompts/*.txt"]

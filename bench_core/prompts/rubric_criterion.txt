@@ -1,0 +1,17 @@
+You are grading one requirement of a piece of legal work product. Grade only this requirement.
+
+TASK GIVEN TO THE AUTHOR
+{instructions}
+
+WORK PRODUCT
+{output}
+
+REQUIREMENT: {title}
+{match_criteria}
+
+Decide whether the work product meets the requirement exactly as written. Judge meaning, not wording: a
+correct statement in different words passes. Do not give credit for content that is absent, and do not
+penalise anything the requirement does not mention.
+
+Reply with JSON only:
+{{"reasoning": "<one or two sentences>", "verdict": "pass" or "fail"}}

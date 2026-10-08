@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "file": "agape-atp-odm-supply-agreement.txt",
+      "sha256": "6d43065ff242642866da6be6b83f9849ad898e6eea9c1e71b0c2853dd3822c5a",
+      "bytes": 20693,
+      "chars": 20693,
+      "kind": "contract filed as an exhibit to an SEC filing",
+      "origin": {
+        "filer": "AGAPE ATP CORP",
+        "form": "10-K/A",
+        "filing_date": "2019-12-02",
+        "exhibit": "EX-10.1",
+        "edgar_url": null
+      },
+      "obtained_from": {
+        "dataset": "CUAD v1 (Contract Understanding Atticus Dataset)",
+        "file": "CUADv1.json",
+        "record_title": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement",
+        "field": "paragraphs[0].context",
+        "repository": "https://github.com/TheAtticusProject/cuad",
+        "commit": "67faa0e6023b04fcaae6cc09497ab00e5d63a2a2",
+        "archive": "data.zip",
+        "archive_sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+        "license": "CC BY 4.0"
+      },
+      "modifications": "none"
+    }
+  ]
+}

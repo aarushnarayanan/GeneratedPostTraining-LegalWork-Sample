@@ -1,0 +1,353 @@
+{
+  "title": "Review an ODM Supply Agreement for the Customer and Prepare a Key Terms and Issues Memo",
+  "work_type": "review",
+  "tags": [
+    "Contracts",
+    "supply",
+    "exclusivity",
+    "change-of-control",
+    "real-filing",
+    "EDGAR",
+    "CUAD"
+  ],
+  "instructions": "You act for the Customer under the attached ODM supply agreement. Review the agreement and prepare a memo that (1) summarises the key commercial and legal terms and (2) flags the provisions that create risk for the Customer. Work only from the attached document. Output: `issues-memo.md`.",
+  "deliverables": {
+    "issues-memo.md": "issues-memo.md"
+  },
+  "criteria": [
+    {
+      "id": "C-001",
+      "title": "Identifies the parties and their roles",
+      "match_criteria": "PASS if the memo identifies Organic Preparations Inc. as the Manufacturer and Agape ATP International Holding Limited as the Customer. FAIL if either party is missing or the roles are reversed.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer')"
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "AGAPE ATP INTERNATIONAL HOLDING LIMITED"
+        }
+      ],
+      "basis": "cuad:Parties"
+    },
+    {
+      "id": "C-002",
+      "title": "States the agreement date",
+      "match_criteria": "PASS if the memo states that the agreement is dated 15 January 2018. FAIL if no date is given or a different agreement date is stated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "THIS AGREEMENT is made on the 15t h day of January 2018"
+        }
+      ],
+      "basis": "cuad:Agreement Date"
+    },
+    {
+      "id": "C-003",
+      "title": "States the ten-year initial term",
+      "match_criteria": "PASS if the memo states that the initial term is ten (10) years. FAIL if the term is omitted or misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "This agreement is for a term of ten (10) years."
+        }
+      ],
+      "basis": "cuad:Expiration Date"
+    },
+    {
+      "id": "C-004",
+      "title": "States the automatic ten-year renewal",
+      "match_criteria": "PASS if the memo states that the agreement renews automatically for successive ten (10) year terms. FAIL if automatic renewal is omitted or the renewal period is misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term."
+        }
+      ],
+      "basis": "cuad:Renewal Term"
+    },
+    {
+      "id": "C-005",
+      "title": "States the six-month notice to terminate without breach",
+      "match_criteria": "PASS if the memo states that a party must give six (6) months' notice of its intention to terminate for any reason other than breach. FAIL if the notice period is omitted or misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement."
+        }
+      ],
+      "basis": "cuad:Notice Period To Terminate Renewal"
+    },
+    {
+      "id": "C-006",
+      "title": "States the governing law",
+      "match_criteria": "PASS if the memo states that the agreement is governed by the laws of England. FAIL if governing law is omitted or misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "This agreement shall be governed by the Laws of England (English common and statutory Law)."
+        }
+      ],
+      "basis": "cuad:Governing Law"
+    },
+    {
+      "id": "C-007",
+      "title": "Describes the dispute resolution clause",
+      "match_criteria": "PASS if the memo states that disputes not settled by consultation go to arbitration by the International Chamber of Commerce located in Switzerland. FAIL if arbitration is omitted, or the forum is misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "shall be decided by Arbitration by the Arbitration Committee of the International Chamber of Commerce located in Switzerland"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-008",
+      "title": "Identifies the Customer's exclusivity",
+      "match_criteria": "PASS if the memo states that the Customer is appointed sole and exclusive agent for the Schedule A products and that the Manufacturer may not sell those products to any other party without the Customer's prior written consent. FAIL if either the exclusive appointment or the Manufacturer's sale restriction is missing.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement"
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Manufacturer covenants not to sell any product listed in this agreement, or product name (as listed in schedule A of this agreement) to any other party without prior written consent of the Customer."
+        }
+      ],
+      "basis": "cuad:Exclusivity"
+    },
+    {
+      "id": "C-009",
+      "title": "Ties exclusivity to the Schedule B minimum purchases",
+      "match_criteria": "PASS if the memo states that the exclusive appointment is based on the minimum annual purchase requirements in Schedule B, and that exclusive rights continue beyond the ten-year term only if the Customer fulfils those minimums. FAIL if the memo does not connect exclusivity to the minimum purchase requirements.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "based on minimum annual product purchase requirements as listed in Schedule B of this agreement"
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Manufacturer grants exclusive rights to the Customer for the term of ten (10) years from the date of the signing of this agreement and for an indefinite period upon the customer fulfilling the minimum annual purchase requirement as listed in Schedule B. of this agreement."
+        }
+      ],
+      "basis": "cuad:Minimum Commitment"
+    },
+    {
+      "id": "C-010",
+      "title": "Flags the change-of-control termination rights as a risk",
+      "match_criteria": "PASS if the memo flags that either party may summarily terminate if control of the other party passes to persons it regards, in its absolute discretion, as unsuitable, or if a transfer of voting stock results in a change in effective control. FAIL if the memo does not identify a change-of-control termination right.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable."
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner."
+        }
+      ],
+      "basis": "cuad:Change Of Control"
+    },
+    {
+      "id": "C-011",
+      "title": "States the assignment restriction and its consequence",
+      "match_criteria": "PASS if the memo states that neither party may assign without the other's prior written consent and that assigning or attempting to assign without consent is a ground for summary termination. FAIL if the consent requirement is omitted. FAIL if the termination consequence is omitted.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer."
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "On either party assigning or attempting to assign this agreement without the prior written consent of the other party."
+        }
+      ],
+      "basis": "cuad:Anti-Assignment"
+    },
+    {
+      "id": "C-012",
+      "title": "Identifies the restriction on competing products",
+      "match_criteria": "PASS if the memo states that the Customer may source and sell products outside Schedule A only if they do not compete with the Schedule A products. FAIL if the non-compete restriction is not identified.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "That they are non-competing products to the range of products or those products listed in schedule A of this agreement."
+        }
+      ],
+      "basis": "cuad:Non-Compete"
+    },
+    {
+      "id": "C-013",
+      "title": "Identifies the right of first refusal over the product IP",
+      "match_criteria": "PASS if the memo states that the Manufacturer must offer the Customer a first right of refusal to purchase the intellectual property for the Schedule A products. FAIL if the right of first refusal is not identified.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Manufacturer agrees to offer the Customer the first right of refusal to purchase the intellectual property for the products listed in Schedule A of this agreement based upon agreed terms."
+        }
+      ],
+      "basis": "cuad:Rofr/Rofo/Rofn"
+    },
+    {
+      "id": "C-014",
+      "title": "States the payment terms",
+      "match_criteria": "PASS if the memo states that 50% of the total order cost is payable on placing the order and the remaining 50% before the goods leave the Manufacturer's warehouse. FAIL if the payment split or timing is omitted or misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "50% of the Total Order Cost must be paid on placement of the customer's order."
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The remaining 50% of the total order cost must be paid prior to the goods leaving the warehouse of the manufacturer."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-015",
+      "title": "Flags the seven-day window to reject defective product",
+      "match_criteria": "PASS if the memo states that the Customer must notify the Manufacturer of rejection within seven (7) days after receipt and that products not rejected in time are deemed accepted. FAIL if the seven-day window or the deemed acceptance is omitted.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "provided that the Customer shall within seven (7) days after receipt of such alleged defective Product, notify the Manufacturer of its rejection"
+        },
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "Products not rejected within the foregoing time periods shall be deemed accepted by the Customer."
+        }
+      ],
+      "basis": "cuad:Warranty Duration"
+    },
+    {
+      "id": "C-016",
+      "title": "States the Customer's insurance obligation",
+      "match_criteria": "PASS if the memo states that the Customer must maintain product liability insurance during the term naming the Manufacturer as additional insured. FAIL if the Customer's insurance obligation is omitted.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "The Customer shall at all times during the term of this agreement maintain product liability insurance, covering all products sold by the Manufacturer to the Customer and which policy shall name the Manufacturer as Additional Insured."
+        }
+      ],
+      "basis": "cuad:Insurance"
+    },
+    {
+      "id": "C-017",
+      "title": "States the 21-day cure period for breach",
+      "match_criteria": "PASS if the memo states that a rectifiable breach must be rectified within 21 days of notification. FAIL if the cure period is omitted or misstated.",
+      "deliverables": [
+        "issues-memo.md"
+      ],
+      "sources": [
+        "agape-atp-odm-supply-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "agape-atp-odm-supply-agreement.txt",
+          "quote": "Where the breach is rectifiable, the breaching party has 21 days from the date of notification of its breach to rectify."
+        }
+      ],
+      "basis": "text"
+    }
+  ]
+}

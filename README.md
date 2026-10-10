@@ -4,8 +4,11 @@ A benchmark for legal AI agents in which **every source document is a real, publ
 Tasks ask an agent to do a piece of legal work on those documents, and a rubric of pass/fail criteria
 grades the result.
 
-**Status: sample for review.** Three tasks, five documents, 50 criteria. No lawyer has reviewed the
-rubrics and no model has been run against them yet.
+**Status: sample for review.** Three tasks, five documents, 50 criteria, and a `reference/` gold
+completion for each task — see [docs/task-format.md](docs/task-format.md#reference-optional). Judged
+independently by Claude Sonnet 5: 50/50 criteria pass, all three tasks score 1.0 (`results/`, not
+committed). A second judge, GPT-5.5, is wired up (`scripts/judge_gpt.py`) but has not actually run —
+it needs an `OPENAI_API_KEY`. No lawyer has reviewed the rubrics yet.
 
 ## How it relates to Harvey LAB
 
@@ -50,6 +53,7 @@ tasks/<practice-area>/<group>/<task>/
     task.json          instructions, deliverables, criteria
     sources.json       provenance for every document
     documents/         the real documents, unchanged
+    reference/         optional: a gold completion per deliverable, for training/calibration use
 bench_core/
     validate.py        format, checksum and evidence checks
     scoring.py         all-pass rubric scoring
@@ -57,6 +61,7 @@ bench_core/
     prompts/           the judge prompt
 scripts/
     verify_against_cuad.py   re-check documents and labels against the upstream dataset
+    judge_gpt.py             second judge for run_eval.py, via the OpenAI API (needs OPENAI_API_KEY)
 tests/                 offline tests
 docs/                  task format, evaluation, sourcing policy
 ```

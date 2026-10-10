@@ -69,6 +69,17 @@ One entry per file in `documents/`:
 
 An optional top-level `notes` field describes quirks of the documents.
 
+## reference/ (optional)
+
+A task may hold a `reference/` directory with one file per name in `deliverables` — a gold
+completion that satisfies every criterion, meant to be used as training data (the prompt is
+`instructions` plus `documents/`, the completion is `reference/`), not as something an evaluated
+agent ever sees. It is authored content, scoped by the same sourcing-policy rules as `instructions`
+and `criteria`: it states no fact the documents don't support, and it does not guess at redacted
+text. `python -m bench_core.run_eval --output <task>/reference --judge-cmd ...` scores it like any
+other run's deliverables; `bench_core.validate` does not check it, so passing every criterion
+against it still needs an independent judge run (or a lawyer) before it is trusted as ground truth.
+
 ## Writing criteria
 
 - One fact or finding per criterion.

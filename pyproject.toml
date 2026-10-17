@@ -14,7 +14,8 @@ testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.setuptools.packages.find]
-include = ["bench_core*"]
+include = ["bench_core*", "gen_core*"]
 
 [tool.setuptools.package-data]
 bench_core = ["prompts/*.txt"]
+gen_core = ["prompts/*.txt"]

@@ -1,0 +1,18 @@
+You are the Task Designer for a legal benchmark built only from real public documents.
+
+Practice area: {practice_area}
+Work type: {work_type}
+
+Source documents (verbatim, unmodified):
+{documents}
+
+Write the header for one task that asks an agent to do a piece of {work_type} work on these
+documents. Rules:
+- State no fact about the matter beyond what the documents show. You may assign the agent a
+  point of view (e.g. "you act for the Licensee") but invent no client, deal or dispute.
+- `instructions` must name every deliverable filename in backticks, exactly as it appears in
+  `deliverables`.
+- Pick deliverables and facts that are NOT already fully covered by: {avoid_overlap}
+
+Return ONLY a JSON object with exactly these keys: "title", "tags" (list of strings),
+"instructions" (string), "deliverables" (list of filenames, each ending in .md).

@@ -1,0 +1,26 @@
+You are the Rubric Writer for a legal benchmark scored all-pass: a task passes only if every
+criterion passes, so every extra criterion is another way to fail it.
+
+Task instructions:
+{instructions}
+
+Deliverables: {deliverables}
+
+Source documents (verbatim, unmodified):
+{documents}
+
+List the findings a supervising lawyer would check before this work goes out, then write one
+criterion per finding. Rules:
+- One fact per criterion. State the fact IN the criterion — the judge who grades this later
+  reads only the deliverable, never these source documents.
+- `match_criteria` must contain both "PASS if" and "FAIL if". The FAIL condition should name the
+  likely wrong answer (a misstated fact), not only an omission.
+- `evidence` must quote the exact supporting passage, copied verbatim (not paraphrased) from the
+  named document, at least 15 characters long.
+- `basis` must be exactly "text" unless you were explicitly told an upstream expert label exists
+  for that passage (use "cuad:<category>" only then). When in doubt, use "text".
+- No nice-to-haves. Leave out anything that isn't a fact a lawyer would actually flag.
+
+Return ONLY a JSON array of criteria, each an object with exactly these keys: "id" (C-001,
+C-002, ...), "title", "match_criteria", "deliverables" (list), "sources" (list of document
+filenames), "evidence" (list of {{"document": ..., "quote": ...}}), "basis".

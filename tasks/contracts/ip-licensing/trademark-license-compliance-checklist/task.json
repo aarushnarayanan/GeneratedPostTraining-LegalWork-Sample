@@ -1,0 +1,163 @@
+{
+  "title": "Draft a Licensee Compliance Obligations Checklist Under a Trademark License Agreement",
+  "work_type": "draft",
+  "tags": [
+    "Contracts",
+    "IP licensing",
+    "trademark",
+    "compliance",
+    "real-filing",
+    "EDGAR",
+    "CUAD"
+  ],
+  "instructions": "You act for the Licensee under the attached trademark license agreement. Draft an internal compliance checklist listing the Licensee's ongoing affirmative obligations in using the Brand: the standards it must meet, the notices and approvals it owes, and the duties that follow if something goes wrong or the agreement ends. Work only from the attached document. Output: `obligations-checklist.md`.",
+  "deliverables": {
+    "obligations-checklist.md": "obligations-checklist.md"
+  },
+  "criteria": [
+    {
+      "id": "C-001",
+      "title": "States the quality-control standard",
+      "match_criteria": "PASS if the checklist states that the Licensee must use the Brand in a manner consistent with the Licensor's high standards and reputation for quality and in accordance with good trademark practice. FAIL if the standard is omitted or weakened to something like 'reasonable care'.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee's Permitted Activity shall be in a manner consistent with Licensor's high standards of and reputation for quality, and in accordance with good trademark practice wherever any of the same are used."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-002",
+      "title": "States the trademark notice obligation",
+      "match_criteria": "PASS if the checklist states that the Licensee must use whatever trademark notices the Licensor requests, or that applicable laws, rules or industry practice require. FAIL if the notice obligation is omitted.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee shall use with the Brand any applicable trademark notices as may be requested by Licensor or required under applicable laws, regulations, stock exchange and other rules (\"Laws\") and reputable industry practice."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-003",
+      "title": "States the compliance-with-laws obligation and who bears its cost",
+      "match_criteria": "PASS if the checklist states that the Licensee must comply at all times, at its own expense, with applicable laws and reputable industry practice relating to its business and the Permitted Activity. FAIL if the obligation is omitted or stated as being at the Licensor's expense.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee shall, at its sole expense, comply at all times with all applicable Laws and reputable industry practice pertaining to the Licensee Business and Permitted Activity."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-004",
+      "title": "States the infringement-notification duty",
+      "match_criteria": "PASS if the checklist states that the Licensee must notify the Licensor promptly after becoming aware of any actual or threatened infringement, imitation, dilution or misappropriation of the Brand. FAIL if this notification duty is omitted.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee shall notify Licensor promptly after it becomes aware of any actual or threatened infringement, imitation, dilution, misappropriation or other unauthorized use or conduct in derogation (\"Infringement\") of the Brand."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-005",
+      "title": "States the enforcement cooperation duty and who pays for it",
+      "match_criteria": "PASS if the checklist states that the Licensor alone has the right to bring an action over infringement and that the Licensee must cooperate in that action at the Licensor's expense. FAIL if it states the Licensee bears that expense, or omits the cooperation duty.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensor shall have the sole right to bring any Action to remedy the foregoing, and Licensee shall cooperate with Licensor in same, at Licensor's expense."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-006",
+      "title": "States the sublicensee-breach notification duty",
+      "match_criteria": "PASS if the checklist states that the Licensee must notify the Licensor promptly once it becomes aware that a sublicensee has breached its sublicense. FAIL if this notification duty is omitted.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Licensee shall notify Licensor promptly after becoming aware that any sublicensee has breached its sublicense"
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-007",
+      "title": "States the Licensee's standing representation of authority",
+      "match_criteria": "PASS if the checklist states that the Licensee represents and warrants that it has full power and authority to enter into and perform its obligations under the Agreement. FAIL if this representation is omitted.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "The warranting party has full power and authority to enter into and perform its obligations under this Agreement in accordance with its terms."
+        }
+      ],
+      "basis": "text"
+    },
+    {
+      "id": "C-008",
+      "title": "States the cessation-of-use duty on termination",
+      "match_criteria": "PASS if the checklist states that upon termination of the Agreement for any reason, the Licensee must immediately cease all use of the Permitted Activity, except as required by applicable law. FAIL if the cessation duty is omitted or described as optional.",
+      "deliverables": [
+        "obligations-checklist.md"
+      ],
+      "sources": [
+        "ms-direct-lending-trademark-license-agreement.txt"
+      ],
+      "evidence": [
+        {
+          "document": "ms-direct-lending-trademark-license-agreement.txt",
+          "quote": "Upon termination of this Agreement for any reason, (a) Licensee shall immediately, except as required by applicable Law, (i) cease all use of the Permitted Activity"
+        }
+      ],
+      "basis": "text"
+    }
+  ]
+}

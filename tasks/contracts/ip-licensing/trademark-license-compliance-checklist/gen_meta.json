@@ -1,0 +1,28 @@
+{
+  "seed": {
+    "practice_area": "contracts",
+    "group": "ip-licensing",
+    "work_type": "draft",
+    "mode": "real"
+  },
+  "agents": {
+    "designer": "manual",
+    "rubric_writer": "manual",
+    "reference_author": "manual"
+  },
+  "gates": {
+    "schema_provenance_evidence": "pass",
+    "label": "pass: no cuad-basis criteria",
+    "audit": "pass",
+    "reference_judges": [
+      "skipped: no judges configured for this run"
+    ],
+    "blind_solve": "not_run: build-order step not in this first draft (see gen_core README)",
+    "leakage": "not_run: build-order step not in this first draft (see gen_core README)",
+    "dedup": "not_run: build-order step not in this first draft (see gen_core README)",
+    "human_review": "not_run: build-order step not in this first draft (see gen_core README)"
+  },
+  "split": "train",
+  "review_status": "unreviewed",
+  "revision_of": null
+}

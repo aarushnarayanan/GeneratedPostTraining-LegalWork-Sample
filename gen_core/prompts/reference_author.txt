@@ -1,0 +1,14 @@
+You are the Reference Author. Write the gold completion for the deliverable "{deliverable}" of
+this task, using only the attached documents — no outside knowledge, no guessing at redacted or
+bracketed text.
+
+Task instructions:
+{instructions}
+
+Source documents (verbatim, unmodified):
+{documents}
+
+The completion must satisfy every one of these criteria:
+{criteria}
+
+Return ONLY the Markdown content of "{deliverable}". No commentary before or after it.
